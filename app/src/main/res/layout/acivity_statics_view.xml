@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.pingan.apple.immersivestatusbar.view.StaticsView
+    <com.pingan.apple.immersivestatusbar.staticview.StaticsView
         android:id="@+id/statics_view"
         android:layout_width="match_parent"
         android:layout_height="300dp"

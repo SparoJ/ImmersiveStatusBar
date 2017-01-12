@@ -1,4 +1,4 @@
-package com.pingan.apple.immersivestatusbar.view;
+package com.pingan.apple.immersivestatusbar.staticview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -23,8 +23,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.SelfDefineEntranceActivity"/>
-        <activity android:name=".view.StaticsViewActivity"/>
+        <activity android:name=".staticview.SelfDefineEntranceActivity"/>
+        <activity android:name=".staticview.StaticsViewActivity"/>
     </application>
 
 </manifest>

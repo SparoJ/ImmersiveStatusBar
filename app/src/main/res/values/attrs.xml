@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="staticsView">
+        <attr name="yMaxValue" format="integer"/>
+        <attr name="yDivideCount" format="integer"/>
+        <attr name="titleView" format="string|reference"/>
+        <attr name="borderColor" format="color|reference"/>
+        <attr name="textColor" format="color|reference"/>
+        <attr name="pathColor" format="color|reference"/>
+    </declare-styleable>
+</resources>

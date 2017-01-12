@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"> <!--这里-->
+
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom"
+    android:layout_marginLeft="10dp"
+    android:layout_width="48dp"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_search_white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/title_back_icon"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        tools:text="1"/>
+
+</RelativeLayout>
+
+    <TextView
+android:layout_marginLeft="10dp"
+android:textColor="#9bd435"
+tools:text="￥5.00"
+android:textStyle="bold"
+android:textSize="18sp"
+android:gravity="center_vertical"
+android:layout_width="0dp"
+android:layout_weight="1"
+android:layout_height="match_parent"/>
+
+<TextView
+android:layout_width="110dp"
+android:textColor="#ffffff"
+android:gravity="center"
+android:textSize="16sp"
+android:text="去购物车"
+android:background="#9bd435"
+android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>

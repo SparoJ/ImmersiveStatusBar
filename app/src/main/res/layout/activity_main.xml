@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+
+              android:orientation="vertical"
+              android:clipChildren="false"
+              tools:context=".MainActivity">
+
+    <!--<android.support.v7.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+    <!--<include
+
+            android:clipToPadding="true"
+        android:id="@+id/toolbar"
+        layout="@layout/title_bar"
+    />-->
+
+    <TextView
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009959"
+        android:text="ä½ å¥½ï¼Œè¯·é—®ä½ æœ‰ç”·æœ‹å‹å—"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#ff669d"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:text="还款提醒"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_is_open_repayment_remind"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/toggle_button_off_on_select"/>
+
+
+
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/btn_toggle"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:background="@drawable/toggle_selector"
+        android:textOff=""
+        android:textOn=""
+    />
+
+    <ToggleButton
+        android:id="@+id/btn_toggle_second"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:background="@drawable/toggle_selector"
+        android:textOff=""
+        android:checked="false"
+        android:textOn=""
+    />
+
+<TextView
+    android:id="@+id/geo_location"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:clipChildren="false"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:src="@drawable/icon_search_white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="测试 ClipChildren 属性"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#00fff0"
+        />
+    <Button
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_simple_self_define"
+        android:text="simple self-define view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

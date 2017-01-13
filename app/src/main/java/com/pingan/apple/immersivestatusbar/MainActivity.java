@@ -20,8 +20,6 @@ import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.pingan.apple.immersivestatusbar.staticview.SelfDefineEntranceActivity;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 

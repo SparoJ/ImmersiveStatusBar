@@ -23,8 +23,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".staticview.SelfDefineEntranceActivity"/>
+        <activity android:name=".SelfDefineEntranceActivity"/>
         <activity android:name=".staticview.StaticsViewActivity"/>
+        <activity android:name=".progressview.ProgressViewActivity"/>
     </application>
 
 </manifest>

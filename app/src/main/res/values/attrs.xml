@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="staticsView">
+        <!--y轴最大刻度-->
         <attr name="yMaxValue" format="integer"/>
+        <!--y轴子刻度数量-->
         <attr name="yDivideCount" format="integer"/>
+        <!--view 标题名-->
         <attr name="titleView" format="string|reference"/>
+        <!--view 左 下 线色-->
         <attr name="borderColor" format="color|reference"/>
+        <!--view 中 文本颜色-->
         <attr name="textColor" format="color|reference"/>
+        <!--view 中 点到点之间连线的color-->
         <attr name="pathColor" format="color|reference"/>
     </declare-styleable>
+
+    <declare-styleable name="circleProgressView">
+        <!--view 固定不动时圆color-->
+        <attr name="stableCircleColor" format="color|reference"></attr>
+        <!--view arc progress滚动时color-->
+        <attr name="moveArcColor" format="color|reference"></attr>
+        <!--view 固定不动圆边界宽度-->
+        <attr name="stableCircleWidth" format="dimension"></attr>
+        <!--view 滚动arc 边界宽度-->
+        <attr name="moveArcWidth" format="dimension"></attr>
+        <!--内圆环的半径-->
+        <attr name="innerCircleRadius" format="dimension"></attr>
+
+    </declare-styleable>
+
 </resources>

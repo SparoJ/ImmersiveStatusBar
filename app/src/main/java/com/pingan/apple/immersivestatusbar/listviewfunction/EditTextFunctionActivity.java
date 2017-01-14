@@ -3,7 +3,9 @@ package com.pingan.apple.immersivestatusbar.listviewfunction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -121,6 +123,23 @@ public class EditTextFunctionActivity extends AppCompatActivity implements EditT
             item.isChange = false;
             final ViewHolder finalHolder = holder;
 
+            holder.msgEdit.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+
 
             holder.msgEdit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
@@ -134,7 +153,8 @@ public class EditTextFunctionActivity extends AppCompatActivity implements EditT
                         if(!TextUtils.equals(beforeMsg, currentMsg)) {
                             item.editMsg = currentMsg;
                             item.isChange = true;
-                            ListEditTextState.publish(item);
+//                            ListEditTextState.publish(item);
+                            mChangedImpl.getEditTextMsg(item);
                         }
                         finalHolder.msgEdit.setText(currentMsg);
                         Log.e(TAG, "onFocusChange: "+"===setOnFocusChangeListener" +"==="+currentMsg+";;position;;;"+position);

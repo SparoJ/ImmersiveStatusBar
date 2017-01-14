@@ -26,6 +26,8 @@
         <activity android:name=".SelfDefineEntranceActivity"/>
         <activity android:name=".staticview.StaticsViewActivity"/>
         <activity android:name=".progressview.ProgressViewActivity"/>
+        <activity android:name=".listviewfunction.ListViewFunctionActivity"/>
+        <activity android:name=".listviewfunction.EditTextFunctionActivity" android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>

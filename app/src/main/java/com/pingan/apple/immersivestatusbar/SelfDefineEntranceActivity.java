@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.pingan.apple.immersivestatusbar.listviewfunction.ListViewFunctionActivity;
 import com.pingan.apple.immersivestatusbar.progressview.ProgressViewActivity;
 import com.pingan.apple.immersivestatusbar.staticview.StaticsViewActivity;
 
@@ -20,6 +21,7 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
 
     private Button mBtnStaticsView;
     private Button mBtnCircleProgressView;
+    private Button mBtnListViewEdit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
         mBtnCircleProgressView = (Button) findViewById(R.id.btn_circleProgress_view);
         mBtnStaticsView.setOnClickListener(this);
         mBtnCircleProgressView.setOnClickListener(this);
+
+        mBtnListViewEdit = (Button) findViewById(R.id.btn_listview_edittext);
+        mBtnListViewEdit.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +51,10 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
             case R.id.btn_circleProgress_view :
                 intent.setClass(SelfDefineEntranceActivity.this, ProgressViewActivity.class);
                 break;
+            case R.id.btn_listview_edittext :
+                intent.setClass(SelfDefineEntranceActivity.this, ListViewFunctionActivity.class);
+                break;
+            //btn_listview_edittext
         }
         startActivity(intent);
     }

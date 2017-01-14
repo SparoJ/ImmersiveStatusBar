@@ -13,15 +13,13 @@ import android.widget.EditText;
 
 import com.pingan.apple.immersivestatusbar.R;
 
-import rx.functions.Action1;
-
 /**
  * @author apple
  * @Description :
  * @date 17/1/13  上午9:23
  */
 
-public class ListViewFunctionActivity extends AppCompatActivity implements View.OnClickListener {
+public class ListViewFunctionActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button mBtnEditTextFunction;
 
@@ -56,15 +54,16 @@ public class ListViewFunctionActivity extends AppCompatActivity implements View.
 //                etTest.setText(trim);
             }
         });
-        ListEditTextState.getObservable().subscribe(new Action1<ListEditTextBean>() {
-            @Override
-            public void call(ListEditTextBean editTextState) {
-                // 获取 item 判断
-                if(null != editTextState) {
-                    Log.e("sdh",editTextState.isChange+"///"+editTextState.position+"///"+editTextState.editMsg );
-                }
-            }
-        });
+//        ListEditTextState.getObservable().subscribe(new Action1<ListEditTextBean>() {
+//            @Override
+//            public void call(ListEditTextBean editTextState) {
+//                // 获取 item 判断
+//                if(null != editTextState) {
+//                    Log.e("sdh",editTextState.isChange+"///"+editTextState.position+"///"+editTextState.editMsg );
+//                }
+//            }
+//        });
+//
     }
 
     @Override

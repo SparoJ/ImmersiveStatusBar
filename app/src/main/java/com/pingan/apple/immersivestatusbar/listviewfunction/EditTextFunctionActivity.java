@@ -24,7 +24,7 @@ import java.util.List;
  * @Description :
  * @date 17/1/13  上午9:38
  */
-public class EditTextFunctionActivity extends AppCompatActivity{
+public class EditTextFunctionActivity extends AppCompatActivity implements EditTextChangedImpl{
 
     private ListView mLvEditText;
     private String[] listTitle = {"星期一","星期二","星期三","星期四","星期五","星期六","星期日"};
@@ -47,7 +47,7 @@ public class EditTextFunctionActivity extends AppCompatActivity{
 
     private void process() {
         initData();
-        mLvEditText.setAdapter(new MyAdapter());
+        mLvEditText.setAdapter(new MyAdapter(this));
     }
 
     private void initData() {
@@ -67,7 +67,21 @@ public class EditTextFunctionActivity extends AppCompatActivity{
         mLength = mLvEditText.getLastVisiblePosition() - mLvEditText.getFirstVisiblePosition();
     }
 
+    @Override
+    public void getEditTextMsg(ListEditTextBean bean) {
+        Log.e(TAG, "getEditTextMsg: editMsg==="+ bean.editMsg+"//isChange//"+bean.isChange+"//position//"+bean.position);
+        if(bean.isChange) {
+            bean.isChange = false; //reset the state of the edittext msg
+        }
+    }
+
+
     public class MyAdapter extends BaseAdapter {
+
+        EditTextChangedImpl mChangedImpl;
+        private MyAdapter(EditTextChangedImpl changedImpl) {
+            this.mChangedImpl = changedImpl;
+        }
 
         @Override
         public int getCount() {

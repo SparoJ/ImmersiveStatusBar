@@ -13,6 +13,8 @@ import android.widget.EditText;
 
 import com.pingan.apple.immersivestatusbar.R;
 
+import static com.pingan.apple.immersivestatusbar.R.id.btn_listview_edittext_immediate;
+
 /**
  * @author apple
  * @Description :
@@ -22,6 +24,7 @@ import com.pingan.apple.immersivestatusbar.R;
 public class ListViewFunctionActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button mBtnEditTextFunction;
+    private Button mBtnEditTextImmediate;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +37,10 @@ public class ListViewFunctionActivity extends AppCompatActivity implements View.
     private void process() {
         mBtnEditTextFunction = (Button) findViewById(R.id.btn_listview_edittext_function);
         mBtnEditTextFunction.setOnClickListener(this);
+
+        mBtnEditTextImmediate = (Button) findViewById(R.id.btn_listview_edittext_immediate);
+        mBtnEditTextImmediate.setOnClickListener(this);
+
         final EditText etTest = (EditText) findViewById(R.id.et_test);
         etTest.setText("test --> tessssss");
         etTest.addTextChangedListener(new TextWatcher() {
@@ -72,6 +79,9 @@ public class ListViewFunctionActivity extends AppCompatActivity implements View.
         switch (v.getId()) {
             case R.id.btn_listview_edittext_function :
                 intent.setClass(ListViewFunctionActivity.this, EditTextFunctionActivity.class);
+                break;
+            case btn_listview_edittext_immediate :
+                intent.setClass(ListViewFunctionActivity.this, EditTextImmediateNoticeActivity.class);
                 break;
         }
         startActivity(intent);

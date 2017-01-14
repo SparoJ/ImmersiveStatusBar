@@ -22,12 +22,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
+<!--self define view-->
         <activity android:name=".SelfDefineEntranceActivity"/>
         <activity android:name=".staticview.StaticsViewActivity"/>
         <activity android:name=".progressview.ProgressViewActivity"/>
+
+        <!--list view item function handle-->
         <activity android:name=".listviewfunction.ListViewFunctionActivity"/>
         <activity android:name=".listviewfunction.EditTextFunctionActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".listviewfunction.EditTextImmediateNoticeActivity" android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>

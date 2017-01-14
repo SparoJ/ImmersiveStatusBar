@@ -1,5 +1,7 @@
 package com.pingan.apple.immersivestatusbar.listviewfunction;
 
+import android.widget.EditText;
+
 /**
  * @author apple
  * @Description :
@@ -8,4 +10,6 @@ package com.pingan.apple.immersivestatusbar.listviewfunction;
 
 public interface EditTextChangedImpl {
     void getEditTextMsg(ListEditTextBean editTextBean);
+
+    void  getChangedEditText(EditText  edit, int position);
 }

@@ -31,6 +31,12 @@
         <activity android:name=".listviewfunction.ListViewFunctionActivity"/>
         <activity android:name=".listviewfunction.EditTextFunctionActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".listviewfunction.EditTextImmediateNoticeActivity" android:windowSoftInputMode="adjustPan"/>
+
+        <!--recyclerview demo-->
+        <activity android:name=".recyclerviewdemo.complexdemo.ComplexActivity"/>
+        <activity android:name=".recyclerviewdemo.headfootitem.HeadFootItemActivity" />
+        <activity android:name=".recyclerviewdemo.pinestickview.PineStickActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
     </application>
 
 </manifest>

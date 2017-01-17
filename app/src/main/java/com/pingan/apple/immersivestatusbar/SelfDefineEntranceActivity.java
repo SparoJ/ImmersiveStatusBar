@@ -9,6 +9,9 @@ import android.widget.Button;
 
 import com.pingan.apple.immersivestatusbar.listviewfunction.ListViewFunctionActivity;
 import com.pingan.apple.immersivestatusbar.progressview.ProgressViewActivity;
+import com.pingan.apple.immersivestatusbar.recyclerviewdemo.complexdemo.ComplexActivity;
+import com.pingan.apple.immersivestatusbar.recyclerviewdemo.headfootitem.HeadFootItemActivity;
+import com.pingan.apple.immersivestatusbar.recyclerviewdemo.pinestickview.PineStickActivity;
 import com.pingan.apple.immersivestatusbar.staticview.StaticsViewActivity;
 
 /**
@@ -22,6 +25,9 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
     private Button mBtnStaticsView;
     private Button mBtnCircleProgressView;
     private Button mBtnListViewEdit;
+    private Button mBtnRecyclerView;
+    private Button mBtnRecyclerHeadFootItem;
+    private Button mBtnRecyclerPineStick;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +45,17 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
 
         mBtnListViewEdit = (Button) findViewById(R.id.btn_listview_edittext);
         mBtnListViewEdit.setOnClickListener(this);
+
+        mBtnRecyclerView = (Button) findViewById(R.id.btn_recyclerView_function);
+        mBtnRecyclerView.setOnClickListener(this);
+
+        mBtnRecyclerHeadFootItem = (Button) findViewById(R.id.btn_recyclerView_head_foot);
+        mBtnRecyclerHeadFootItem.setOnClickListener(this);
+
+        mBtnRecyclerPineStick = (Button) findViewById(R.id.btn_recyclerView_pine_stick);
+        mBtnRecyclerPineStick.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -53,6 +70,15 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
                 break;
             case R.id.btn_listview_edittext :
                 intent.setClass(SelfDefineEntranceActivity.this, ListViewFunctionActivity.class);
+                break;
+            case R.id.btn_recyclerView_function :
+                intent.setClass(SelfDefineEntranceActivity.this, ComplexActivity.class);
+                break;
+            case R.id.btn_recyclerView_head_foot :
+                intent.setClass(SelfDefineEntranceActivity.this, HeadFootItemActivity.class);
+                break;
+            case R.id.btn_recyclerView_pine_stick :
+                intent.setClass(SelfDefineEntranceActivity.this, PineStickActivity.class);
                 break;
             //btn_listview_edittext
         }

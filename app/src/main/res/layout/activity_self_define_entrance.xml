@@ -24,4 +24,27 @@
      android:text="btn_listview_edittext"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"/>
+
+
+ <Button
+     android:layout_gravity="center_horizontal"
+     android:id="@+id/btn_recyclerView_function"
+     android:text="btn_recyclerView_function"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+
+ <Button
+     android:layout_gravity="center_horizontal"
+     android:id="@+id/btn_recyclerView_head_foot"
+     android:text="btn_recyclerView_head_foot"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+
+ <Button
+     android:layout_gravity="center_horizontal"
+     android:id="@+id/btn_recyclerView_pine_stick"
+     android:text="btn_recyclerView_pine_stick"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+
 </LinearLayout>

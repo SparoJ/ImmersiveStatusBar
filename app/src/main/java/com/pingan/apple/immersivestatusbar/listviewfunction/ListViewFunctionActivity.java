@@ -13,6 +13,8 @@ import android.widget.EditText;
 
 import com.pingan.apple.immersivestatusbar.R;
 
+import java.util.ArrayList;
+
 import static com.pingan.apple.immersivestatusbar.R.id.btn_listview_edittext_immediate;
 
 /**
@@ -40,6 +42,28 @@ public class ListViewFunctionActivity extends AppCompatActivity implements View.
 
         mBtnEditTextImmediate = (Button) findViewById(R.id.btn_listview_edittext_immediate);
         mBtnEditTextImmediate.setOnClickListener(this);
+
+        ArrayList<String> a = new ArrayList();
+
+        ArrayList<String> b = new ArrayList();
+
+        ArrayList<String> all = new ArrayList();
+        all.add("aaa");
+        all.add("bbb");
+        all.add("ccc");
+        for (int i = 0; i < all.size(); i++) {
+            b.add(all.get(i));
+        }
+        a.addAll(all);
+//        b.addAll(all);
+//        b.remove(2);
+//        Test test = b.get(2);
+//        Test test = new Test("ccc",35);
+//        test.name = "whatwhat";
+        b.set(2,"test");
+        Log.e("sdh", "invalidate: "+ a  );
+        Log.e("sdh", "invalidate: "+ b  );
+        Log.e("sdh", "invalidate: "+ all  );
 
         final EditText etTest = (EditText) findViewById(R.id.et_test);
         etTest.setText("test --> tessssss");

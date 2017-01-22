@@ -13,6 +13,7 @@ import com.pingan.apple.immersivestatusbar.recyclerviewdemo.complexdemo.ComplexA
 import com.pingan.apple.immersivestatusbar.recyclerviewdemo.headfootitem.HeadFootItemActivity;
 import com.pingan.apple.immersivestatusbar.recyclerviewdemo.pinestickview.PineStickActivity;
 import com.pingan.apple.immersivestatusbar.staticview.StaticsViewActivity;
+import com.pingan.apple.immersivestatusbar.thirdview.RxTestActivity;
 
 /**
  * @author apple
@@ -28,6 +29,7 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
     private Button mBtnRecyclerView;
     private Button mBtnRecyclerHeadFootItem;
     private Button mBtnRecyclerPineStick;
+    private Button mBtnRxFunctionTest;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,6 +57,8 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
         mBtnRecyclerPineStick = (Button) findViewById(R.id.btn_recyclerView_pine_stick);
         mBtnRecyclerPineStick.setOnClickListener(this);
 
+        mBtnRxFunctionTest = (Button) findViewById(R.id.btn_rx_function_test);
+        mBtnRxFunctionTest.setOnClickListener(this);
 
     }
 
@@ -79,6 +83,9 @@ public class SelfDefineEntranceActivity extends AppCompatActivity implements Vie
                 break;
             case R.id.btn_recyclerView_pine_stick :
                 intent.setClass(SelfDefineEntranceActivity.this, PineStickActivity.class);
+                break;
+            case R.id.btn_rx_function_test :
+                intent.setClass(SelfDefineEntranceActivity.this, RxTestActivity.class);
                 break;
             //btn_listview_edittext
         }

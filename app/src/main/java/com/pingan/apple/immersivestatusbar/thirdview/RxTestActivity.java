@@ -94,6 +94,7 @@ public class RxTestActivity extends BaseActivity {
 
                 Log.e(TAG, "call:thread================= "+Thread.currentThread().getName() );
                 final String finalS = s;
+                //  完成子线程内部创建 外部链式操作中的流不用设置线程而导致ui阻塞
                 Schedulers.io().createWorker().schedule(new Action0() {
                     @Override
                     public void call() {

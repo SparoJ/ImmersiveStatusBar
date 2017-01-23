@@ -1,8 +1,12 @@
 package com.pingan.apple.immersivestatusbar.utils;
 
 import android.content.Context;
+import android.os.Looper;
 import android.support.annotation.NonNull;
-import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * @author apple
@@ -13,6 +17,10 @@ import android.widget.EditText;
 public class CommonUtil {
     public static long mTime ;
     public static final long TIME = 500;
+    public static final String FORMAT_DATE = "yyyy年MM月dd日";
+    public static final String FORMAT_SEPERATOR = " ";
+    public static final String FORMAT_WEEKDAY = "EEEE";
+    public static final String DATE_FORMATER = FORMAT_DATE + FORMAT_SEPERATOR + FORMAT_WEEKDAY;
 
     public static int px2dip(int value, @NonNull Context context) {
 
@@ -37,4 +45,39 @@ public class CommonUtil {
 //        mTime = 0;
 //        return true;
 //    }
+
+    /****************precaution check *******************/
+    /**check if null**/
+    public static <T> T checkIfNull(T value) {
+        if(value == null) {
+            throw new NullPointerException(value +"== null");
+        }
+        return value;
+    }
+
+    public static <T> T checkIfNull(T value, String msg) {
+        if(value == null) {
+            throw new NullPointerException(msg);
+        }
+        return value;
+    }
+
+
+
+    /**check current thread is the main thread**/
+    public static void checkUiThread() {
+        if(Looper.getMainLooper() != Looper.myLooper()) {
+            throw new IllegalStateException("Must be called from the Main Thread. Current Thread was :"+ Thread.currentThread());
+        }
+    }
+
+    /****************date convert *******************/
+    public static String dateConvertString(Date date) {
+        return dateConvertString(date, DATE_FORMATER);
+    }
+
+    public static String dateConvertString(Date date, String format) {
+        SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.CHINA);
+        return sdf.format(date);
+    }
 }

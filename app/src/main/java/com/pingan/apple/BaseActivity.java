@@ -1,12 +1,11 @@
 package com.pingan.apple;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * @author apple
@@ -24,11 +23,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         if(initPageLayout() > 0) {
             setContentView(initPageLayout());
         }
+        Log.e(TAG, " onCreate: " );
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        Log.e(TAG, " onStart: " );
     }
 
 
@@ -38,6 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
         initViewListener();
         process();
+        Log.e(TAG, "onPostCreate: " );
     }
 
     protected abstract void process();
@@ -49,21 +51,43 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Log.e(TAG, "onResume: " );
     }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
+        Log.e(TAG, "onPostResume: " );
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        Log.e(TAG, "onSaveInstanceState:outState=== "+outState );
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        Log.e(TAG, "onRestoreInstanceState:savedInstanceState=== "+savedInstanceState );
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(TAG, "onPause: ");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e(TAG, "onStop: " );
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e(TAG, "onDestroy: " );
     }
 
     protected abstract int initPageLayout();
@@ -71,4 +95,5 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected <T extends View> T $(int id) {
         return (T)super.findViewById(id);
     }
+
 }

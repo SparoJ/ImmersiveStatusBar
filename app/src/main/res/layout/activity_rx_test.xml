@@ -18,4 +18,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <RelativeLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:text="btn_rx_from"
+            android:id="@+id/btn_rx_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:text="btn_rx_just"
+            android:id="@+id/btn_rx_just"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
 </LinearLayout>

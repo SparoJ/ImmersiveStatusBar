@@ -9,6 +9,7 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 
 
+
 /**
  * @author apple   同样的方式 参考 glide的写法 glide 的load（params） 中的params可为object 不用重载重复代码
  * @Description :
@@ -22,7 +23,7 @@ public class PicassoBitmapLoader implements ImageLoaderInterface<ImageView> {
     }
 
     private PicassoBitmapLoader(){}
-    public PicassoBitmapLoader getInstance() {
+    public static PicassoBitmapLoader getInstance() {
         return LoaderInstance.mInstance;
     }
 
@@ -41,17 +42,31 @@ public class PicassoBitmapLoader implements ImageLoaderInterface<ImageView> {
 
     @Override
     public void loadNormalImg(Context context, File file, ImageView imageView) {
-
+        Picasso.with(context).load(file).centerCrop()
+                .transform(new RectBitmapTransformer())
+                .fit()
+                .into(imageView);
     }
 
     @Override
     public void loadNormalImg(Context context, int res, ImageView imageView) {
-
+        Picasso.with(context).load(res).centerCrop()
+                .transform(new RectBitmapTransformer())
+                .fit()
+                .into(imageView);
     }
 
     @Override
     public void loadCircleImg(Context context, Uri path, ImageView imageView) {
         Picasso.with(context).load(path).centerCrop()
+                .transform(new RoundBitmapTransformer())
+                .fit()
+                .into(imageView);
+    }
+
+    @Override
+    public void loadCircleImg(Context context, int res, ImageView imageView) {
+        Picasso.with(context).load(res).centerCrop()
                 .transform(new RoundBitmapTransformer())
                 .fit()
                 .into(imageView);

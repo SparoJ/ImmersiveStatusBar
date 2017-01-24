@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.jakewharton.rxbinding.view.RxView;
 import com.pingan.apple.BaseActivity;
@@ -16,6 +17,7 @@ import com.pingan.apple.immersivestatusbar.network.NetWorks;
 import com.pingan.apple.immersivestatusbar.rxhelper.RxScheduleHelper;
 import com.pingan.apple.immersivestatusbar.utils.CommonUtil;
 import com.pingan.apple.immersivestatusbar.utils.OnDoubleClickListener;
+import com.pingan.loader.PicassoBitmapLoader;
 import com.squareup.picasso.Picasso;
 import com.trello.rxlifecycle.android.ActivityEvent;
 
@@ -55,6 +57,9 @@ public class RxTestActivity extends BaseActivity {
 
     private int PAGE_NUM = 10;
     private SwipeRefreshLayout mSrlMovie;
+    private ImageView mIvRect;
+    private ImageView mIvRound;
+
 
     @Override
     protected int initPageLayout() {
@@ -168,7 +173,11 @@ public class RxTestActivity extends BaseActivity {
         showMovie();
         mSrlMovie.setColorSchemeColors(Color.RED, Color.BLUE, Color.BLACK);
 
+        PicassoBitmapLoader.getInstance().loadNormalImg(this, R.drawable.taeyeon_three, mIvRect);
+        PicassoBitmapLoader.getInstance().loadCircleImg(this, R.drawable.taeyeon_three, mIvRound);
+
     }
+
 
     private void setRv() {
         CommonUtil.checkIfNull(mListMovie) ;
@@ -279,6 +288,8 @@ public class RxTestActivity extends BaseActivity {
         mBtnJust = $(R.id.btn_rx_just);
         mSrlMovie = $(R.id.srl_movie);
 
+        mIvRect = $(R.id.iv_picasso_rect);
+        mIvRound = $(R.id.iv_picasso_round);
     }
 
 }

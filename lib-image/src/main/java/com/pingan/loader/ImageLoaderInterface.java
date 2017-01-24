@@ -22,4 +22,5 @@ public interface ImageLoaderInterface<T extends View> extends Serializable {
 
 
     void loadCircleImg(Context context, Uri path, T imageView);
+    void loadCircleImg(Context context, int res, T imageView);
 }

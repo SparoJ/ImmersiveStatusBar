@@ -13,7 +13,7 @@ import com.pingan.apple.immersivestatusbar.recyclerviewdemo.complexdemo.ComplexA
 import com.pingan.apple.immersivestatusbar.recyclerviewdemo.headfootitem.HeadFootItemActivity;
 import com.pingan.apple.immersivestatusbar.recyclerviewdemo.pinestickview.PineStickActivity;
 import com.pingan.apple.immersivestatusbar.staticview.StaticsViewActivity;
-import com.pingan.apple.immersivestatusbar.thirdview.RxTestActivity;
+import com.pingan.apple.immersivestatusbar.widget.RxTestActivity;
 
 /**
  * @author apple

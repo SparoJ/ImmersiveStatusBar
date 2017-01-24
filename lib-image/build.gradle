@@ -1,17 +1,15 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "com.pingan.apple.immersivestatusbar"
-        minSdkVersion 17
+        minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
 
-        buildConfigField("String", "API_MOVIE_BASE_URL", "\"${API_MOVIE_BASE_URL}\"")
     }
     buildTypes {
         release {
@@ -24,10 +22,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.0.1'
-    // If you want to bind to Android-specific lifecycles
-    //    compile 'com.trello:rxlifecycle-android:1.0'
-    // If you want pre-written Activities and Fragments you can subclass as providers
-    //    compile 'com.tamic.novate:novate:1.2.9'
     compile project(':library')
-    compile project(':lib-image')
 }

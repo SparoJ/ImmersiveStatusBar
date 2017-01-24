@@ -1,1 +1,1 @@
-include ':app', ':activitytaskflag'
+include ':app', ':activitytaskflag', ':library', ':lib-image'

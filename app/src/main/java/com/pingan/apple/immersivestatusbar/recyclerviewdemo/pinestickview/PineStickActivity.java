@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.pingan.apple.immersivestatusbar.R;
 import com.pingan.apple.immersivestatusbar.recyclerviewdemo.complexdemo.ComplexActivity;
-import com.pingan.apple.immersivestatusbar.thirdview.CircleImageView;
+import com.pingan.apple.immersivestatusbar.widget.CircleImageView;
 import com.squareup.picasso.Picasso;
 
 

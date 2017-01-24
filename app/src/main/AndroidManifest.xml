@@ -38,7 +38,7 @@
         <activity android:name=".recyclerviewdemo.pinestickview.PineStickActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <!--Rx serials-->
-        <activity android:name=".thirdview.RxTestActivity"/>
+        <activity android:name=".widget.RxTestActivity"/>
     </application>
 
 </manifest>

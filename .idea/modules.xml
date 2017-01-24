@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ImmersiveStatusBar.iml" filepath="$PROJECT_DIR$/ImmersiveStatusBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/activitytaskflag/activitytaskflag.iml" filepath="$PROJECT_DIR$/activitytaskflag/activitytaskflag.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-image/lib-image.iml" filepath="$PROJECT_DIR$/lib-image/lib-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>

@@ -36,7 +36,7 @@
             android:id="@+id/rl_suspension_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <com.pingan.apple.immersivestatusbar.thirdview.CircleImageView
+            <com.pingan.apple.immersivestatusbar.widget.CircleImageView
                 android:layout_alignParentLeft="true"
                 android:id="@+id/civ_pine_stick"
                 android:layout_width="44dp"

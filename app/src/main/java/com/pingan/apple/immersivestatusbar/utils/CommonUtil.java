@@ -16,6 +16,7 @@ import java.util.Locale;
 
 public class CommonUtil {
     public static long mTime ;
+    public static long mLastClickTime;
     public static final long TIME = 500;
     public static final String FORMAT_DATE = "yyyy年MM月dd日";
     public static final String FORMAT_SEPERATOR = " ";
@@ -45,6 +46,16 @@ public class CommonUtil {
 //        mTime = 0;
 //        return true;
 //    }
+
+    public static boolean checkDoubleClick() {
+        long currentTime = System.currentTimeMillis();
+        long timeD = currentTime - mLastClickTime;
+        if(0<timeD && timeD < TIME) {
+            return true; // which means double click happened
+        }
+        mLastClickTime = currentTime;
+        return false;
+    }
 
     /****************precaution check *******************/
     /**check if null**/

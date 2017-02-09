@@ -5,8 +5,10 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.jakewharton.rxbinding.view.RxView;
 import com.pingan.apple.BaseActivity;
@@ -42,7 +44,7 @@ import rx.schedulers.Schedulers;
  * @date 17/1/20  下午3:41
  */
 
-public class RxTestActivity extends BaseActivity {
+public class RxTestActivity extends BaseActivity implements View.OnClickListener {
 
 
     private Button mBtnDouble;
@@ -267,6 +269,8 @@ public class RxTestActivity extends BaseActivity {
             }
         });
 
+        mBtnFrom.setOnClickListener(this);
+        mBtnJust.setOnClickListener(this);
 
 //        mBtnDebounce.setOnClickListener(new OnDoubleClickListener() {
 //            @Override
@@ -292,4 +296,24 @@ public class RxTestActivity extends BaseActivity {
         mIvRound = $(R.id.iv_picasso_round);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_rx_from :
+                if(!CommonUtil.checkDoubleClick()) {
+                    Toast.makeText(RxTestActivity.this, "btn_rx_from has been clicked", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(RxTestActivity.this, "btn_rx_from double clickkkkkkkkkkk", Toast.LENGTH_SHORT).show();
+                }
+
+                break;
+            case R.id.btn_rx_just :
+                if(!CommonUtil.checkDoubleClick()) {
+                    Toast.makeText(RxTestActivity.this, "btn_rx_just has been clicked", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(RxTestActivity.this, "btn_rx_just double clickkkkkkkkkkk", Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
+    }
 }

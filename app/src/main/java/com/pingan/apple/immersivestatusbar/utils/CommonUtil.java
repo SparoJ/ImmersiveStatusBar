@@ -3,6 +3,7 @@ package com.pingan.apple.immersivestatusbar.utils;
 import android.content.Context;
 import android.os.Looper;
 import android.support.annotation.NonNull;
+import android.view.View;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,6 +18,7 @@ import java.util.Locale;
 public class CommonUtil {
     public static long mTime ;
     public static long mLastClickTime;
+    public static View mView;
     public static final long TIME = 500;
     public static final String FORMAT_DATE = "yyyy年MM月dd日";
     public static final String FORMAT_SEPERATOR = " ";
@@ -47,13 +49,15 @@ public class CommonUtil {
 //        return true;
 //    }
 
-    public static boolean checkDoubleClick() {
+    public static boolean checkDoubleClick(View view) {
+
         long currentTime = System.currentTimeMillis();
         long timeD = currentTime - mLastClickTime;
-        if(0<timeD && timeD < TIME) {
+        if(0<timeD && timeD < TIME && !(null != mView && mView.getId() != view.getId())) {
             return true; // which means double click happened
         }
         mLastClickTime = currentTime;
+        mView = view;
         return false;
     }
 

@@ -300,18 +300,18 @@ public class RxTestActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_rx_from :
-                if(!CommonUtil.checkDoubleClick()) {
-                    Toast.makeText(RxTestActivity.this, "btn_rx_from has been clicked", Toast.LENGTH_LONG).show();
+                if(!CommonUtil.checkDoubleClick(v)) {
+                    Log.e(TAG, "onClick: btn_rx_from has been clicked" );
                 } else {
-                    Toast.makeText(RxTestActivity.this, "btn_rx_from double clickkkkkkkkkkk", Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "onClick: btn_rx_from double clickkkkkkkkkkk" );
                 }
 
                 break;
             case R.id.btn_rx_just :
-                if(!CommonUtil.checkDoubleClick()) {
-                    Toast.makeText(RxTestActivity.this, "btn_rx_just has been clicked", Toast.LENGTH_LONG).show();
+                if(!CommonUtil.checkDoubleClick(v)) {
+                    Log.e(TAG, "onClick: btn_rx_just has been clicked" );
                 } else {
-                    Toast.makeText(RxTestActivity.this, "btn_rx_just double clickkkkkkkkkkk", Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "onClick: btn_rx_just double clickkkkkkkkkkk" );
                 }
                 break;
         }
